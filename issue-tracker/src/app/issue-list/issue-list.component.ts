@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Issue } from '../issue';
 import { IssuesService } from '../issues.service';
+
 
 @Component({
   selector: 'app-issue-list',
