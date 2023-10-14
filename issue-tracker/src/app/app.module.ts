@@ -6,10 +6,12 @@ import { BrowserAnimationsModule } from
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { IssueListComponent } from './issue-list/issue-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IssueListComponent
   ],
   imports: [
     BrowserModule,
