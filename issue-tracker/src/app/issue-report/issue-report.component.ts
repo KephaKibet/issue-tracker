@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Issue } from '../issue';
+
+import { IssuesService } from '../issues.service';
 
   
 interface IssueForm {
@@ -17,6 +20,8 @@ interface IssueForm {
 
 export class IssueReportComponent {
 
+  constructor(private issueService: IssuesService) { }
+
 
   issueForm = new FormGroup<IssueForm>({
     title: new FormControl('', { nonNullable: true }),
@@ -25,4 +30,8 @@ export class IssueReportComponent {
     type: new FormControl('', { nonNullable: true })
    });
 
+   addIssue() {
+    this.issueService.createIssue(this.issueForm.getRawValue() as
+   Issue);
+   } 
 }
